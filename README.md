@@ -1,36 +1,125 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Organa Global 🌐
 
-## Getting Started
+Welcome to the official repository of **Organa Global** —  
+a platform that fuses advanced technologies and market strategies to accelerate your business success online.
 
-First, run the development server:
+[View Live Website ➡️](https://organa-global.vercel.app)
+
+---
+
+## 🚀 Project Overview
+
+Organa Global offers comprehensive solutions for digital growth:
+- Tailored web development
+- Effective digital marketing campaigns
+- Strategic consulting for online businesses
+- Introduction to the world of Web3 technologies
+
+We have over **15 years of experience** and a **highly qualified team** committed to taking your business to the next level.
+
+---
+
+## ✨ Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Styling:** TailwindCSS + Custom CSS
+- **Animations:** Framer Motion
+- **Particles:** react-tsparticles
+- **Counters:** react-countup
+- **UI/UX:** Light/Dark Mode, Smooth Scroll, Cinematic Page Transitions, Microinteractions
+
+---
+
+## 🧩 Features
+
+- ⚡ Lightning-fast performance
+- 🎬 Cinematic loading animations
+- 🌙 Seamless Light/Dark Mode with system preference detection
+- 🧠 Smart scroll behavior and lazy loading
+- 🎨 Elegant particle backgrounds
+- 📈 Animated statistics on scroll
+- 🖱️ Custom animated cursor for enhanced UX
+- 📱 Fully responsive and mobile-first design
+- 🛡️ SEO and Core Web Vitals optimized
+
+---
+
+## 📁 Project Structure
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+src/
+  app/
+    layout.tsx
+    globals.css
+    page.tsx
+    web3/
+      page.tsx
+    thank-you/
+      page.tsx
+  components/
+    Navbar.tsx
+    Footer.tsx
+    Preloader.tsx
+    ThemeToggle.tsx
+    CustomCursor.tsx
+    ParticlesBackground.tsx
+    StatsSection.tsx
+    ui/
+      Button.tsx
+  lib/
+    utils.ts
+public/
+  images/
+    logo-organa.svg
+    web3-illustration.png
+    thankyou-icon.svg
+tailwind.config.ts
+tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Clone the repository
+git clone https://github.com/free4fun/organa-global.git
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Move into the project directory
+cd organa-global
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Install dependencies
+pnpm install
 
-## Learn More
+# Start the development server
+pnpm dev
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📄 **README.md Parte 4: Deployment + License + Contact**
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🚀 Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+We recommend deploying with [Vercel](https://vercel.com/) for the best performance.
+
+- Connect your GitHub repository.
+- Import the project into Vercel.
+- Click **Deploy** — Done!
+
+You can also link a custom domain (e.g., organa.global) easily through Vercel.
+
+---
+
+## 📜 License
+
+This project is licensed under the [Affero GPL v3](LICENSE).
+
+---
+
+## 🤝 Contact
+
+- 📧 Email: [info@organa.global](mailto:info@organa.global)
+- 🌎 Website: [organa.global](https://organa.global)
+- 📍 Based in Ciudad de La Costa, Uruguay
+
+---
+
+> Built with 0xCAFE to empower your digital success.
