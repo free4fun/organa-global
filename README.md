@@ -1,125 +1,115 @@
 # Organa Global 🌐
 
 Welcome to the official repository of **Organa Global** —  
-a platform that fuses advanced technologies and market strategies to accelerate your business success online.
+A platform where advanced technologies and market strategies converge to accelerate your business success online.
 
-[View Live Website ➡️](https://organa-global.vercel.app)
+[🔗 View Live Website](https://organa-global.vercel.app)
 
 ---
 
 ## 🚀 Project Overview
 
-Organa Global offers comprehensive solutions for digital growth:
-- Tailored web development
+**Organa Global** delivers comprehensive solutions for digital growth, combining experience, innovation, and future-driven strategies:
+
+- Custom web development
 - Effective digital marketing campaigns
 - Strategic consulting for online businesses
-- Introduction to the world of Web3 technologies
+- Introduction to Web3 technologies and decentralized tools
 
-We have over **15 years of experience** and a **highly qualified team** committed to taking your business to the next level.
+With over **15 years of experience** and a **highly skilled team**, we're here to help you **stand out** and **succeed** in a saturated digital world.
 
 ---
 
-## ✨ Tech Stack
+## 🛠️ Tech Stack
 
-- **Framework:** Next.js (App Router)
-- **Styling:** TailwindCSS + Custom CSS
+- **Framework:** Vite + React
+- **Styling:** TailwindCSS (with custom design enhancements)
 - **Animations:** Framer Motion
-- **Particles:** react-tsparticles
+- **Particles Background:** react-tsparticles
 - **Counters:** react-countup
-- **UI/UX:** Light/Dark Mode, Smooth Scroll, Cinematic Page Transitions, Microinteractions
+- **UI/UX Features:**  
+  - Light/Dark Mode with system detection  
+  - Smooth scrolling  
+  - Cinematic page transitions  
+  - Microinteractions for immersive UX
 
 ---
 
-## 🧩 Features
+## ✨ Features
 
-- ⚡ Lightning-fast performance
-- 🎬 Cinematic loading animations
-- 🌙 Seamless Light/Dark Mode with system preference detection
-- 🧠 Smart scroll behavior and lazy loading
+- ⚡ Blazing-fast performance (Vite-powered)
+- 🎬 Cinematic animations and page loading
+- 🌙 Dynamic Light/Dark mode switching
+- 🧠 Smart lazy loading and optimized scroll behavior
 - 🎨 Elegant particle backgrounds
-- 📈 Animated statistics on scroll
-- 🖱️ Custom animated cursor for enhanced UX
-- 📱 Fully responsive and mobile-first design
-- 🛡️ SEO and Core Web Vitals optimized
+- 📈 Animated statistics counters on view
+- 🖱️ Custom animated cursor for enhanced interaction
+- 📱 Fully responsive and mobile-first layout
+- 🛡️ SEO-optimized and Core Web Vitals friendly
 
 ---
 
 ## 📁 Project Structure
 
-```bash
-src/
-  app/
-    layout.tsx
-    globals.css
-    page.tsx
-    web3/
-      page.tsx
-    thank-you/
-      page.tsx
-  components/
-    Navbar.tsx
-    Footer.tsx
-    Preloader.tsx
-    ThemeToggle.tsx
-    CustomCursor.tsx
-    ParticlesBackground.tsx
-    StatsSection.tsx
-    ui/
-      Button.tsx
-  lib/
-    utils.ts
-public/
-  images/
-    logo-organa.svg
-    web3-illustration.png
-    thankyou-icon.svg
-tailwind.config.ts
-tsconfig.json
-```
-
-# Clone the repository
-git clone https://github.com/free4fun/organa-global.git
-
-# Move into the project directory
-cd organa-global
-
-# Install dependencies
-pnpm install
-
-# Start the development server
-pnpm dev
-
+FIXME
 
 ---
 
-## 📄 **README.md Parte 4: Deployment + License + Contact**
+## ⚙️ Getting Started
+
+First, clone the repository:
+
+```bash
+git clone https://github.com/free4fun/organa-global.git
+````
+
+Navigate to the project directory:
+
+```bash
+cd organa-global
+```
+
+Install dependencies:
+
+```bash
+pnpm install
+```
+
+Run the development server:
+
+```bash
+pnpm dev
+```
+
+Your app should now be running at [http://localhost:5173](http://localhost:5173).
 
 ---
 
 ## 🚀 Deployment
 
-We recommend deploying with [Vercel](https://vercel.com/) for the best performance.
+We recommend deploying with [Vercel](https://vercel.com/):
 
 - Connect your GitHub repository.
 - Import the project into Vercel.
-- Click **Deploy** — Done!
+- Configure environment variables if needed.
+- Click **Deploy** — and you're live!
 
-You can also link a custom domain (e.g., organa.global) easily through Vercel.
+Need a custom domain (like `organa.global`)? Vercel makes it simple.
 
 ---
 
 ## 📜 License
 
-This project is licensed under the [Affero GPL v3](LICENSE).
+This project is licensed under the [Affero GPL v3 License](LICENSE).
 
 ---
 
 ## 🤝 Contact
 
 - 📧 Email: [info@organa.global](mailto:info@organa.global)
-- 🌎 Website: [organa.global](https://organa.global)
-- 📍 Based in Ciudad de La Costa, Uruguay
+- 🌐 Website: [https://organa.global](https://organa.global)
+- 📍 Based in Ciudad de la Costa, Uruguay
 
 ---
 
-> Built with 0xCAFE to empower your digital success.
+> ✨ Built with 0xCAFE
