@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+/* Variables de diseño */
+:root {
+  --font-body: 'Inter', sans-serif;
+  --breakpoint-custom: 1440px;
+  --color-primary: #6366f1;
+  --color-secondary: #a78bfa;
+  --color-dark: #0a0a0a;
+  --color-light: #ffffff;
+}
+
+/* Mejoras tipográficas globales */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Fondos decorativos */
+.bg-noise-pattern {
+  background-image: url('/noise.svg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Animación de degradado */
+@keyframes gradientMove {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.animate-gradientMove {
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+}
+
+
+/* Botones actualizados */
+.button-primary {
+  @apply bg-white text-indigo-600 font-bold px-8 py-4 rounded-full shadow-md hover:bg-indigo-100 transition-all duration-300 ease-in-out;
+}
+
+.button-secondary {
+  @apply bg-indigo-600 text-white font-semibold px-6 py-3 rounded-full hover:bg-indigo-700 transition-all duration-300;
+}
+
+/* Animaciones custom */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Separadores artísticos */
+.section-divider {
+  @apply w-24 h-1 bg-indigo-500 rounded-full mx-auto my-12;
+}
+
+/* Headings actualizados */
+.heading-primary {
+  @apply text-5xl md:text-7xl font-extrabold leading-tight text-gray-900 mb-6;
+}
+
+.heading-secondary {
+  @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4;
+}
+
+/* Transiciones globales */
+.transition-default {
+  @apply transition-all duration-300 ease-in-out;
+}
