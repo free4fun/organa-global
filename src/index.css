@@ -1,57 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap');
 @import "tailwindcss";
 
-/* Variables de diseño */
+/* Variables */
 :root {
-  --font-body: 'Inter', sans-serif;
-  --breakpoint-custom: 1440px;
-  --color-primary: #6366f1;
-  --color-secondary: #a78bfa;
-  --color-dark: #0a0a0a;
-  --color-light: #ffffff;
+  
+  --color-primary: #8c52ff;
+  --color-secondary: #cc6ce5;
+  --color-dark: #313131;
+  --color-light: #f8f8f8;
+
 }
 
-/* Mejoras tipográficas globales */
+@theme {
+  --color-primary: #8c52ff;
+  --color-secondary: #cc6ce5;
+  --color-dark: #313131;
+  --font-overpass: 'Overpass';
+  --font-body: 'IBM Plex Sans';
+
+}
+
+/* Reset */
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--color-light);
-  color: var(--color-dark);
+  font-family: var(--font-body);
+  background-color: black;
+  color: var(--color-light);
+  margin: 0;
+  padding: 0;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Fondos decorativos */
+/* Cursor Custom */
+body, a, button {
+  cursor: none;
+}
+
+/* Noise Texture */
 .bg-noise-pattern {
   background-image: url('/noise.svg');
   background-size: cover;
   background-position: center;
 }
 
-/* Animación de degradado */
-@keyframes gradientMove {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+/* Partículas animadas suaves */
+@keyframes particleFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.7);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-10px) scale(0.9);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0) scale(0.7);
+  }
 }
 
-.animate-gradientMove {
-  background-size: 400% 400%;
-  animation: gradientMove 15s ease infinite;
+.animate-particleFloat {
+  animation-name: particleFloat;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
 }
 
-
-/* Botones actualizados */
+/* Buttons */
 .button-primary {
-  @apply bg-white text-indigo-600 font-bold px-8 py-4 rounded-full shadow-md hover:bg-indigo-100 transition-all duration-300 ease-in-out;
+  @apply bg-white text-primary font-bold px-8 py-4 rounded-full shadow-md hover:bg-secondary transition-all duration-300;
 }
 
 .button-secondary {
-  @apply bg-indigo-600 text-white font-semibold px-6 py-3 rounded-full hover:bg-indigo-700 transition-all duration-300;
+  @apply bg-primary text-white font-semibold px-6 py-3 rounded-full hover:bg-secondary transition-all duration-300;
 }
 
-/* Animaciones custom */
+/* Typography */
+.heading-primary {
+  @apply text-5xl md:text-7xl font-extrabold leading-tight text-white mb-6;
+}
+
+.heading-secondary {
+  @apply text-3xl md:text-4xl font-bold text-primary mb-4;
+}
+
+/* Animations */
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(20px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -61,21 +98,110 @@ body {
   animation: fadeInUp 1s ease-out forwards;
 }
 
-/* Separadores artísticos */
+/* Scrollbar clean */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Separadores */
 .section-divider {
-  @apply w-24 h-1 bg-indigo-500 rounded-full mx-auto my-12;
+  @apply w-24 h-1 bg-primary rounded-full mx-auto my-12;
 }
 
-/* Headings actualizados */
-.heading-primary {
-  @apply text-5xl md:text-7xl font-extrabold leading-tight text-gray-900 mb-6;
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
 }
 
-.heading-secondary {
-  @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4;
+.glitch {
+  position: relative;
+  color: white;
 }
 
-/* Transiciones globales */
-.transition-default {
-  @apply transition-all duration-300 ease-in-out;
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: 2px 0 var(--color-primary);
+  animation: glitch 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: -2px 0 var(--color-secondary);
+  animation: glitch 2s infinite linear alternate;
+}
+
+.carousel-container {
+  width: 100%;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 1rem;
+  animation: scrollInfinite 60s linear infinite;
+  width: fit-content;
+}
+
+.carousel-card {
+  min-width: 260px;
+  width: calc(100% / 1.1); /* Mobile default */
+  max-width: 300px;
+  height: 380px;
+  flex-shrink: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .carousel-card {
+    width: calc(100% / 4.2); /* 4 cards in viewport + spacing */
+  }
+}
+
+@keyframes scrollInfinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  @keyframes shine {
+    0% {
+      left: -100%;
+    }
+    100% {
+      left: 120%;
+    }
+  }
+
+  .animate-shine {
+    animation: shine 1.5s ease-in-out infinite;
+  }
+
+  .animate-bounce-slow {
+    animation: bounce 2.5s infinite;
+  }
 }

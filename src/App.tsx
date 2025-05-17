@@ -1,22 +1,26 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import CallToAction from './components/CallToAction';
-import Footer from './components/Footer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import MainLayout from '@/layouts/MainLayout';
+import Home from '@/pages/Home';
+import Contact from '@/pages/Contact';
+import About from '@/pages/About';
+import Services from '@/pages/Services';
+import Web3 from '@/pages/Web3';
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <main className="pt-24">
-        <Hero />
-        <About />
-        <Services />
-        <CallToAction/>
-      </main>
-      <Footer/>
-    </>
+  
+
+    return (
+    <BrowserRouter>
+      <Routes>
+          <Route element={<MainLayout/>}>
+          <Route path="/" element={<Home/>} />
+          <Route path="/contact" element={<Contact/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/web3" element={<Web3/>} />
+          <Route path="/services" element={<Services/>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
